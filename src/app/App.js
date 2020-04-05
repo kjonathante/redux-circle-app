@@ -1,6 +1,6 @@
 import React from 'react'
-import Item from '../feature/item/Item'
+import Items from '../features/items/Items'
 
-const App = () => <Item />
+const App = () => <Items />
 
 export default App
