@@ -1,5 +1,5 @@
 // Actions
-// const LOAD   = 'my-app/items/LOAD'
+const LOAD = 'my-app/items/LOAD'
 // const CREATE = 'my-app/items/CREATE';
 // const UPDATE = 'my-app/items/UPDATE';
 // const REMOVE = 'my-app/items/REMOVE';
@@ -10,11 +10,24 @@ const initialState = [
   },
 ]
 
+const loadState = [
+  {
+    id: 2,
+    attribute: 'value #2',
+  },
+  {
+    id: 3,
+    attribute: 'value #3',
+  },
+]
+
 // Reducer
 export default function reducer(state = initialState, action = {}) {
   console.log('itemsSlice', action)
   switch (action.type) {
     // do reducer stuff
+    case LOAD:
+      return [...initialState, ...loadState]
     default:
       return state
   }
@@ -24,6 +37,7 @@ export default function reducer(state = initialState, action = {}) {
 // export function loadItems() {
 //   return { type: LOAD }
 // }
+export const loadItems = () => ({ type: LOAD })
 
 // export function createItem(item) {
 //   return { type: CREATE, item };
