@@ -1,6 +1,10 @@
 import React from 'react'
-import Items from '../features/items/Items'
+import CirclesPanel from '../features/circles/CirclesPanel'
 
-const App = () => <Items someName={{ property: 'value' }} />
+const App = () => (
+  <div>
+    <CirclesPanel />
+  </div>
+)
 
 export default App

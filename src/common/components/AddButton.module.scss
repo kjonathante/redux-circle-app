@@ -1,0 +1,39 @@
+.button {
+  --l: 3.5em;
+  > p {
+    cursor: pointer;
+    position: relative;
+    // right: 1em;
+    // bottom: 1em;
+    background-color: tomato;
+    height: var(--l);
+    width: var(--l);
+    border-radius: 50%;
+    // z-index: 2;
+  }
+  > p:before,
+  > p:after {
+    position: absolute;
+    content: '';
+    // height: calc(var(--l) / 2);
+    // width: 0.25em;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0.5em;
+    // transition: all 0.25s;
+  }
+  > p:before {
+    height: calc(var(--l) / 2 );
+    width: .25em;
+   }
+  
+   > p:after {
+    width: calc(var(--l) / 2 );
+    height: .25em;
+   }
+  
+}
